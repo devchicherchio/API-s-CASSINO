@@ -48,9 +48,9 @@ def get_doubleblaze():
     conexão = sqlite3.connect('api.db')
     comando = f"SELECT valor1, valor2, valor3, valor4, valor5, valor6, valor7, identify FROM api WHERE casa='double_blaze'"
     cursor = conexão.execute(comando)
-    resultado = cursor.fetchone()
+    resultadoo = cursor.fetchone()
     cursor.close()
     conexão.close()
-    return jsonify(resultado)
+    return jsonify(resultadoo)
 
 app.run(port=5000,host='localhost',debug=True)
